@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ứng dụng chuyển đổi tiền tệ</title>
+    </head>
+    <body>
+<table >
+    <tr>
+       <th>Amount</th>
+       <th>From Currency</th>
+       <th>To Currency</th>
+       <th></th>
+        
+    </tr>
+    <tr>
+        <td><input type="number" id="sotien"></td>
+        <td><select id="from" class="selectCurrency">
+            <option value="23000">Việt Nam</option>
+            <option value="1">Mỹ</option>
+            <option value="108">Nhật</option>
+        </select></td>
+        <td><select id="to" class="selectCurrency">
+            <option value="23000">Việt Nam</option>
+            <option value="1">Mỹ</option>
+            <option value="108">Nhật</option>
+        </select></td>
+        <td><button id="btnCv" onclick="chuyendoitien()">Convert</button></td>
+       
+    </tr>
+</table>
+<br/>
+        <p id="ketqua"></p>
+<style>
+    table {
+        width: 600px;
+    }
+   
+    #btnCv{
+        font-size:16px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:rgb(111, 111, 255);
+        border-radius: 5px;
+        font-weight:bold;
+        color:white;
+        padding: 4px;
+    }
+    #sotien{
+        width:200px;
+        height: 25px;
+    }
+    .selectCurrency{
+        width:140px;
+        height: 30px;
+
+    }
+    #ketqua{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:20px;
+    }
+</style>
+    </body>
+    <script>
+        function chuyendoitien(){
+          let amount=  document.getElementById("sotien").value ;
+          let fromCurrency=  document.getElementById("from").value ;
+          let toCurrency=  document.getElementById("to").value ;
+        
+          result = (amount* toCurrency)/fromCurrency;
+          document.getElementById("ketqua").innerHTML = result;
+            
+        }
+        
+    </script>
+</html>
