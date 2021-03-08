@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ứng dụng máy tính</title>
+    </head>
+    <body>
+        
+<input type="number" id="numberA"/>
+<input type="number" id="numberB"/>
+<br/>
+<br/>
+<button id="btnAddition" class="btn" onclick="addition()">Addition(+)</button>
+<button id="btnSubtraction" class="btn" onclick="subtraction()">Subtraction(-)</button>
+<button id="btnMultiplication" class="btn" onclick="multiplication()">Multiplication(x)</button>
+<button id="btnDivision" class="btn" onclick="division()">Division(/)</button>
+<br/>
+<p id="ketqua"></p>
+<style>
+   
+    .btn{
+        font-size:16px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:rgb(111, 111, 255);
+        border-radius: 5px;
+        font-weight:bold;
+        color:white;
+        padding: 4px;
+    }
+   
+    #numberA{
+        width:200px;
+        height: 25px;
+    }
+    #numberB{
+        width:200px;
+        height: 25px;
+    }
+    #ketqua{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:20px;
+    }
+</style>
+    </body>
+    <script>
+      
+        
+        function addition(){
+            let a = document.getElementById("numberA").value;
+            let b = document.getElementById("numberB").value;
+            
+            let so1 = parseInt(a);
+            let so2 = parseInt(b);
+
+            result = so1 + so2;
+
+            document.getElementById("ketqua").innerHTML = result;
+        }
+        function subtraction(){
+            let a = document.getElementById("numberA").value;
+            let b = document.getElementById("numberB").value;
+            
+            let so1 = parseInt(a);
+            let so2 = parseInt(b);
+
+            result = so1 - so2;
+
+            document.getElementById("ketqua").innerHTML = result;
+        }
+        function multiplication(){
+            let a = document.getElementById("numberA").value;
+            let b = document.getElementById("numberB").value;
+            
+            let so1 = parseInt(a);
+            let so2 = parseInt(b);
+
+            result = so1 * so2;
+
+            document.getElementById("ketqua").innerHTML = result;
+        }
+        function division(){
+            let a = document.getElementById("numberA").value;
+            let b = document.getElementById("numberB").value;
+            
+            let so1 = parseInt(a);
+            let so2 = parseInt(b);
+
+            if(so2 !=0)
+            {
+                result = so1 / so2;
+            }
+            else
+            {
+                document.write("Không có kết quả")
+            }
+
+            document.getElementById("ketqua").innerHTML = result;
+        }
+        
+    </script>
+</html>
