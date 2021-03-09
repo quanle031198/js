@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Thực hành kiểm tra năm nhuận</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+      let year = parseInt(prompt("Enter a year"));
+      let isLeapYear =false;
+
+      if(year % 4 == 0)
+      {
+          if(year % 100 == 0)
+          {
+              if(year % 400 == 0)
+              {
+                  isLeapYear = true;
+              }
+              else
+              {
+                isLeapYear = false;
+              }
+          }
+          else
+          {
+             isLeapYear = true;
+          }
+      }
+      else
+      {
+          isLeapYear = false;
+      }
+        
+      if(isLeapYear)
+      {
+          alert(year +"is a leap year");
+      }
+      else
+      {
+          alert(year +"is not a leap year");
+      }
+    </script>
+</html>
