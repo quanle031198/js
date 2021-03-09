@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>Bài tập tính chỉ số cân nặng của cơ thể</title></head>
+<body>
+   <input type="number" id="height" placeholder="height"/>
+   <input type="number" id="weight" placeholder="weight"/>
+   <button type="button" onclick="doBmi()">Tính BMI</button>
+</body>
+<script>
+    function doBmi(){
+        let height = parseFloat(document.getElementById("height").value);
+        let weight = parseFloat(document.getElementById("weight").value);
+        bmi = weight/ (height*height);
+        console.log(bmi);
+        if(bmi <18)
+        {
+            document.write("Kết quả bmi:" +''+ bmi+'<br/>');
+            document.write("Tình trạng: Underweight");
+        }
+        else if (bmi < 25.0)
+        {
+            document.write("Kết quả bmi:" +''+ bmi+'<br/>');
+            document.write("Tình trạng: Normal");
+        }
+        else if (bmi < 30.0)
+        {
+            document.write("Kết quả bmi:" +''+ bmi+'<br/>');
+            document.write("Tình trạng: Overweight");
+        }
+        else
+        {
+            document.write("Kết quả bmi:" +''+ bmi+'<br/>');
+            document.write("Tình trạng: Obese");
+        }
+    }
+         
+</script>
+</html>
