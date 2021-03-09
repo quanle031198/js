@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>Thực hành luyện tập với cấu trúc if...else...if</title></head>
+<body>
+    <script>
+    let username = prompt("who's there?",'');
+
+    if(username == "Admin")
+    {
+        let password = prompt("Please input your password" ,'');
+        if(password == "TheMaster")
+        {
+            alert("welcome bro !");
+        }
+        else
+        {
+            alert("Canceled")
+        }
+    }
+    else if(username == null)
+    {
+        alert("Canceled");
+    }
+    else
+    {
+        alert("I don't know you");
+    }
+    </script>
+</body>
+
+</html>
