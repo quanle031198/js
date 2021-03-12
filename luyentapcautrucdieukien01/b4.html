@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện tập cấu trúc điều kiện 01-b4</title>
+    </head>
+    <body>
+        <input type="text" placeholder="input a" id="so1"/>
+        <input type="text" placeholder="input b" id="so2"/>
+        <input type="text" placeholder="input c" id="so3"/>
+        <button type="button" onclick="doIt()">Tìm số lớn nhất</button>
+        <br/>
+        <p id="result"></p>
+
+        <script>
+            function doIt (){
+            let a = parseInt(document.getElementById("so1").value);
+            let b = parseInt(document.getElementById("so2").value);
+            let c = parseInt(document.getElementById("so3").value);
+            
+            let max =a;
+            if( max > b && max >c)
+            {
+                document.getElementById("result").innerHTML= "số max là " +a;
+            }
+            else
+            {
+                if(b>c)
+                {
+                    document.getElementById("result").innerHTML= "số max là " +b;
+                }
+                else
+                {
+                    document.getElementById("result").innerHTML= "số max là " +c;
+                }
+            }
+        } 
+            
+        </script>
+        <br/>
+        
+       
+    </body>
+
+</html>

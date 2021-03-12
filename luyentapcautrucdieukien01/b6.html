@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện tập cấu trúc điều kiện 01-b6</title>
+    </head>
+    <body>
+        <input type="text" placeholder="input a" id="so1"/>
+        <button type="button" onclick="doIt()">Tính số hoa hồng</button>
+        <br/>
+        <p id="result"></p>
+        <script>
+            function doIt (){
+            let a = parseInt(document.getElementById("so1").value);
+                if(a <= 200){
+                    result = a*(3/100); 
+                    document.getElementById("result").innerHTML= "số tiền hoa hồng là  " + result;
+                }else if(a <= 500)
+                {
+                    result = a*(5/100);
+                    document.getElementById("result").innerHTML= "số tiền hoa hồng là " +result ; 
+                }else
+                {
+                    result = a*(10/100);
+                    document.getElementById("result").innerHTML= "số tiền hoa hồng là " +result; 
+                }
+            }
+        </script>
+        <br/>
+        
+       
+    </body>
+
+</html>

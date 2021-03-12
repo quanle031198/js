@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện tập cấu trúc điều kiện 01-b5</title>
+    </head>
+    <body>
+        
+        <input type="text" placeholder="Nhập điểm trung bình học kỳ 1" id="pointss1" />
+        <input type="text" placeholder="Nhập điểm trung bình học kỳ 2" id="pointss2" />
+        <button type="button" onclick="averageScore()">Average All Year</button>
+        <br/>
+        <p id="result1"></p>
+        <br/>
+        <p id="result2"></p>
+
+       
+        <style>
+            body {
+                padding:35px
+            }
+            input[type="text"]
+            {
+                width: 200px;
+                height:25px;
+            }
+            button{
+                height:30px;
+                font-size: 15px;
+            }
+            button:hover{
+                background-color: cornflowerblue;
+                color:white;
+            }
+        </style>
+       
+    </body>
+    <script>
+        function averageScore(){
+            let point1 = parseFloat(document.getElementById("pointss1").value);
+            let point2 = parseFloat(document.getElementById("pointss2").value);
+
+            averageAll = (point1 + (point2*2))/3;
+
+            document.getElementById("result1").innerHTML= averageAll; 
+            if( averageAll < 3.5)
+            {
+                document.getElementById("result2").innerHTML= "Bạn xếp loại kém" 
+            } else if (averageAll < 5)
+            {
+              document.getElementById("result2").innerHTML= "Bạn xếp loại yếu" 
+            }else if ( averageAll <6.5)
+            {
+              document.getElementById("result2").innerHTML= "Bạn xếp loại trung bình" 
+            } else if ( averageAll < 8)
+            {
+              document.getElementById("result2").innerHTML= "Bạn xếp loại khá" 
+            }
+            else
+            {
+              document.getElementById("result2").innerHTML= "Bạn xếp loại giỏi" 
+            }
+        }
+         
+      </script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện tập cấu trúc điều kiện 01-b7</title>
+    </head>
+    <body>
+        <input type="text" placeholder="input minute call" id="timeCall"/>
+        <button type="button" onclick="callCharge()"> Call Charge</button>
+        <p id="result"></p>
+        <script>
+            function callCharge(){
+                let timeCall = parseInt(document.getElementById("timeCall").value);
+                let phicodinh = 25000;
+
+                if (timeCall <= 50)
+                {
+                    sum = phicodinh + timeCall * 600;
+                }
+                else if (timeCall <= 200 && timeCall >= 50)
+                {
+                    sum = phicodinh + (timeCall - 50) * 400 + 50 * 200;
+                } else if (timeCall >= 200)
+                {
+                    sum = phicodinh + timeCall * 200;
+                }
+		
+                
+                // if(timeCall <= 50)
+                // {
+                //     phi=timeCall*600;
+                    
+                // }
+                // else if(timeCall <= 150)
+                // {
+                //     phi=(timeCall-50)*400+50*600;
+                // }
+                // else if (timeCall <= 200)
+                // {
+                //     phi=(timeCall-200)*200+150*400+50*600;
+                // }
+                
+
+
+                document.getElementById("result").innerHTML= "Cước điện thoại của bạn là:" +sum;
+            }
+        </script>
+        <br/>
+        
+       
+    </body>
+
+</html>
