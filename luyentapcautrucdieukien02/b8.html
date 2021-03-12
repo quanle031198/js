@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện tập cấu trúc điều kiện 02-08</title>
+    </head>
+    <body>
+        <h2>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.</h2>
+        <input type="text" placeholder="Input your year old" id="yearOld"/>
+        <button type="button" onclick="doIt()">Check</button>
+        <p id="result"></p>
+        
+       
+    </body>
+    <script>
+        function doIt() {
+            let yearOld = parseInt(document.getElementById("yearOld").value);
+            
+            if(yearOld > 0 && yearOld <120){
+                document.getElementById("result").innerHTML= "Tuổi hiện tại của bạn là" +' '+yearOld;
+            }
+            else
+            {
+                document.getElementById("result").innerHTML= "số tuổi không có";
+            }
+        }
+        
+        
+      </script>
+      
+</html>

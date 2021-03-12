@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện tập cấu trúc điều kiện 02-11</title>
+    </head>
+    <body>
+        <h2>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h2>
+        <input type="text" placeholder="Nhập tổng thu nhập" id="numberA"/>
+       
+        
+        <button type="button" onclick="doIt()">Tính thuế thu nhập</button>
+        <p id="result"></p>
+        
+       
+    </body>
+    <script>
+        function doIt() {
+            let a = parseInt(document.getElementById("numberA").value);
+            let thuesuat =parseInt("");
+           
+
+            if(a < 5000000)
+            {
+                thuesuat = 5;
+            }
+            else if (a < 10000000)
+            {
+                thuesuat = 10;
+            }
+            else if (a < 18000000)
+            {
+                thuesuat =  15;
+            }
+            else if (a < 32000000)
+            {
+                thuesuat =  20;
+            }
+            else if (a < 52000000)
+            {
+                thuesuat =  25;
+            }
+            else if (a < 80000000)
+            {
+                thuesuat =  30;
+            }
+            else 
+            {
+                thuesuat =  35;
+            }
+           
+            let thuethunhap = a * (thuesuat/100);
+            document.getElementById("result").innerHTML= 'Thuế thu nhập cá nhân của bạn là:'+' '+thuethunhap;
+        }
+        
+        
+      </script>
+      
+</html>

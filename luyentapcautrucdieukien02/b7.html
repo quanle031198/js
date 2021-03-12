@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện tập cấu trúc điều kiện 02-07</title>
+    </head>
+    <body>
+        <h2>Bài 7: Giải phương trình bậc 2</h2>
+        
+        
+       
+    </body>
+    <script>
+        let a = parseFloat(prompt('Nhập số a:'));
+        let b = parseFloat(prompt('Nhập số b:'));
+        let c = parseFloat(prompt('Nhập số c:'));
+        
+        let delta = b*b - (4*a*c);
+
+        let nghiemkep = -b/(2*a);
+
+        let nghiem1 = (-b + (delta**0.5))/(2*a);
+    
+        let nghiem2 = (-b - (delta**0.5))/(2*a);
+
+        if (delta < 0) {
+            alert('Phương trình vô nghiệm');
+        }
+        if (delta ==0 )
+        {
+          alert('Phương trình có nghiệm  kép là :' +' '+ nghiemkep)
+        }
+        if (delta > 0 )
+        {
+          alert('Phương trình có  nghiệm là :' +' '+ 'x1 =' +' '+nghiem1 );
+          alert('Phương trình có  nghiệm là :' +' '+ 'x2 =' +' '+nghiem2 )
+        }
+        
+        
+      </script>
+      
+</html>

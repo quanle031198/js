@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện tập cấu trúc điều kiện 02-10</title>
+    </head>
+    <body>
+        <h2>Bài 10: Viết chương trình tính giá điện.</h2>
+        <input type="text" placeholder="Nhập lượng điện năng tiêu thụ" id="numberA"/>
+       
+        
+        <button type="button" onclick="doIt()">Tính tiền điện</button>
+        <p id="result"></p>
+        
+       
+    </body>
+    <script>
+        function doIt() {
+            let a = parseInt(document.getElementById("numberA").value);
+            let dogiadien =parseInt("");
+           
+
+            if(a < 50)
+            {
+                dogiadien = 1.484;
+            }
+            else if (a < 100)
+            {
+                dogiadien = 1.533;
+            }
+            else if (a < 200)
+            {
+                dogiadien =  1.786;
+            }
+            else if (a < 300)
+            {
+                dogiadien =  2.242;
+            }
+            else if (a < 400)
+            {
+                dogiadien =  1.50;
+            }
+            else 
+            {
+                dogiadien =  2.587;
+            }
+           
+            let tienDien = a * dogiadien;
+            document.getElementById("result").innerHTML= 'Tiền điện của bạn là'+' '+tienDien;
+        }
+        
+        
+      </script>
+      
+</html>

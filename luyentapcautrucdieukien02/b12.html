@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Luyện tập cấu trúc điều kiện 02-12</title>
+    </head>
+    <body>
+        <h2>Bài 12: Viết chương trình tính lãi ngân hàng</h2>
+        <input type="text" placeholder="Số tiền gửi" id="tienGui"/>
+        <input type="text" placeholder="lãi suất" id="laiSuat"/>
+        <input type="text" placeholder="Số tháng vay" id="soThang"/>
+
+        <button type="button" onclick="doIt()">Check</button>
+        <p id="result"></p>
+        
+       
+    </body>
+    <script>
+        function doIt() {
+            let tienGui = parseInt(document.getElementById("tienGui").value);
+            let laiSuat = parseInt(document.getElementById("laiSuat").value);
+            let soThang = parseInt(document.getElementById("soThang").value);
+            
+           let sotienlai = tienGui* (laiSuat/100) * soThang;
+           document.getElementById("result").innerHTML= "Số tiền lãi là:" +' '+sotienlai;
+        }
+        
+        
+      </script>
+      
+</html>
