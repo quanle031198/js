@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[*Bài tập] Luyện tập vòng lặp 01</title>
+  </head>
+
+  <body>
+    <h2>Bài 4:</h2>
+  </body>
+  <script>
+    let number = parseFloat(prompt("Enter a number:"));
+
+    let num1 = 0;
+    let num2 = 1;
+
+    for (i = 1; i < number; i++) {
+      sum = num1 + num2;
+      num1 = num2;
+      num2 = sum;
+      if (sum % 5 == 0) {
+        document.write(sum + "<br/>");
+        break;
+      }
+    }
+  </script>
+</html>
