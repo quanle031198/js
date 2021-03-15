@@ -10,13 +10,15 @@
   </body>
   <script>
     let num1 = 0;
+    document.write(num1 + "<br/>");
     let num2 = 1;
+    document.write(num2 + "<br/>");
 
     for (i = 1; i < 20; i++) {
-      sum = num1 + num2;
+      num3 = num1 + num2;
       num1 = num2;
-      num2 = sum;
-      document.write(sum + "<br/>");
+      num2 = num3;
+      document.write(num3 + "<br/>");
     }
   </script>
 </html>
