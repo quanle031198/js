@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+  </head>
+
+  <body>
+    <h2>[Bài tập] Hiển thị các số nguyên tố đầu tiên</h2>
+  </body>
+  <script>
+
+
+    function check_snt(num) {
+    
+        if (num < 2) {
+            return false;
+        } else {
+            for(let i= 2; i < num  ; i++)
+            {
+                if(num % i == 0)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
+    let count = 0;
+    let i =2;
+    let total = 0 ;
+    while(count< 20){
+        if(check_snt(i)){
+            count++;
+           
+            document.write(i +'<br/>');
+            
+        }
+        i++;
+    }
+    
+  </script>
+</html>
