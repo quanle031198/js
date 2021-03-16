@@ -9,16 +9,29 @@
     <h2>Bài 6:</h2>
   </body>
   <script>
-    for(i=0;i<30;  i++)
+    
+   function check(num)
+   {
+    if(num % 7 == 0)
+        {
+            return true;
+        }
+        return false;
+   }
+       
+   let count = 0;
+   let j = 0;
+   let dem = 30;
+   let sum = 0;     
+    while(count <= dem)
     {
-        if(i % 7 == 0)
-        {
-            document.write(i+'<br/>');
-        }
-        else
-        {
-          document.write("");
-        }
+      if(check(j))
+      {
+        count++;
+        sum += j;
+      }
+      j++;
     }
+    document.write(sum);
   </script>
 </html>

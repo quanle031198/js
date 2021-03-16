@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[*Bài tập] Luyện tập vòng lặp 01</title>
+  </head>
+
+  <body>
+    <h2>Bài 8:</h2>
+    <input type="button" value="Play" onclick="play()" />
+  </body>
+  <script>
+    function play() {
+      let num1 = parseInt(prompt("Nhập số đầu khoảng cần đoán:"));
+      let num2 = parseInt(prompt("Nhập số cuối khoảng cần đoán:"));
+
+      random = Math.floor(Math.random() * (num2 - num1 + 1) + num1);
+
+      console.log(random);
+
+      let numCheck = 0;
+      do {
+        numCheck = parseInt(prompt("Nhập số mà bạn đoán:"));
+        console.log(numCheck);
+        if (numCheck > random) {
+          alert("GIảm đi!");
+        } else if (numCheck < random) {
+          alert("Tăng lên!");
+        } else {
+          alert("Chúc mừng!");
+          break;
+        }
+      } while (numCheck != random);
+    }
+  </script>
+</html>
