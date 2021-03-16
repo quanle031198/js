@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[*Bài tập] Luyện tập vòng lặp 02</title>
+  </head>
+
+  <body>
+    <h2>Bài 2:</h2>
+  </body>
+  <script>
+    let num = parseInt(prompt("Enter a number :"));
+
+    if (num == 0) {
+      document.write("0! = 1");
+    } else {
+      let gth = 1;
+      for (let i = 1; i <= num; i++) {
+        gth = gth * i;
+      }
+      document.write(num + "! = " + gth);
+    }
+  </script>
+</html>
