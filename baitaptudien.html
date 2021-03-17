@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[Bài tập] Từ điển</title>
+  </head>
+
+  <body>
+    <h2>[Bài tập] Từ điển</h2>
+    <input type="text" placeholder="English search..." id="search" />
+    <input type="button" onclick="search()" value="Search" id="search" />
+    <br/>
+    <span id="result"></span>
+  </body>
+  <script>
+    function search() {
+      let arrEnglish = ["Go", "Run", "Sleep"];
+      let arrTiengViet = ["Đi", "Chạy", "Ngủ"];
+      
+      let search = document.getElementById("search").value;
+      for (let i = 0; i < arrEnglish.length; i++)
+      {
+        if(arrEnglish.indexOf(search) > -1)
+        {
+            document.getElementById("result").innerHTML = "Dịch ra tiếng việt: " + arrTiengViet[arrEnglish.indexOf(search)] ;
+        }
+        else
+        {
+            document.getElementById("result").innerHTML = "Không có trong từ điển"
+        }
+      }
+    }
+  </script>
+</html>
