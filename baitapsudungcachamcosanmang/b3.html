@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+  </head>
+
+  <body>
+    <h2>Bài 3:</h2>
+  </body>
+  <script>
+    let num = prompt("Enter a text :");
+    let str = num.toString();
+    console.log(str);
+    let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let LOWER = "abcdefghijklmnopqrstuvwxyz";
+    let result = [];
+
+    for (let i = 0; i < str.length; i++) {
+        if (UPPER.includes(str[i]))
+        {
+            result.push(str[i].toLowerCase());
+        }else if ( LOWER.includes(str[i]))
+        {
+            result.push(str[i].toUpperCase());
+        }
+        else
+        {
+            result.push(str[i]);
+        }
+    }
+   
+    console.log(result.join(""));
+    
+    
+    
+  </script>
+</html>
