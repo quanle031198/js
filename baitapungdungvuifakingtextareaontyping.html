@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[*Bài tập] Ứng dụng vui Faking Textarea on Typing</title>
+    <script>
+      let str = "AHihi tôi là đồ ngốc :))";
+
+      let stringArr = str.split(" ");
+
+      let index = 0;
+      function clickBtn() {
+        let str = "";
+
+        if (index < stringArr.length) {
+          index++;
+        } else {
+          index = 0;
+          document.getElementById("fakingtext").value = "";
+        }
+
+        for (let i = 0; i < index; i++) {
+          str += stringArr[i] + " ";
+        }
+
+        document.getElementById("fakingtext").value = str;
+      }
+    </script>
+  </head>
+
+  <body>
+    <form name="form">
+      <h2>[*Bài tập] Ứng dụng vui Faking Textarea on Typing</h2>
+      <label>Nhập vào tên bạn</label>
+      <br />
+      <textarea
+        name="textarea"
+        id="fakingtext"
+        oninput="clickBtn()"
+        style="width: 350px; height: 100px"
+      ></textarea>
+      <br/>
+      <button type="button" onclick="clickBtn()">click</button>
+    </form>
+  </body>
+</html>
