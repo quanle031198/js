@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01</title>
+  </head>
+
+  <body>
+    <h2>Bài 3:</h2>
+    <span id="text"></span>
+  </body>
+  <script>
+    function bai3()
+    {
+      let a = parseInt(prompt("Enter a number one :"));
+      let b = parseInt(prompt("Enter a number two :"));
+      if (a > b){
+         let result1 = document.getElementById("text").innerHTML = (a +" > " + b);
+         return result1;
+      }
+      else
+      {
+          res2 = a + b ;
+          let result2 = document.getElementById("text").innerHTML = a+ " + "+b+ " = " + res2;
+          return result2;
+      }
+    }
+    bai3()
+    
+</script>
+</html>

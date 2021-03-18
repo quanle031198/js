@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01</title>
+  </head>
+
+  <body>
+    <h2>Bài 5:</h2>
+    <input type="text" placeholder="Input a starname ..." id="starName" />
+    <button type="button" onclick="searchStar()">Search</button><br /><br />
+    <span id="text"></span>
+  </body>
+  <script>
+    function searchStar() {
+      let nameStar = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus",
+      ];
+      let star = [
+        "Ursa Minor",
+        "Tarurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo",
+      ];
+      let inputName = document.getElementById("starName").value;
+      for (let i = 0; i < star.length; i++) {
+        if (nameStar.indexOf(inputName) > -1) {
+          document.getElementById("text").innerHTML =
+            "Tên chòm sao là : " + star[nameStar.indexOf(inputName)];
+        } else {
+          document.getElementById("text").innerHTML =
+            "Không tìm thấy tên chòm sao của ngôi sao đó";
+        }
+      }
+    }
+  </script>
+</html>
