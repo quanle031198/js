@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[*Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="text" id="txtValue" />
+    <input
+      type="button"
+      id="btnAdd"
+      value="Add"
+      onclick="add_element_to_array()"
+    />
+    <input
+      type="button"
+      id="btnDis"
+      value="Display"
+      style="display: none"
+      onclick="display_array()"
+    />
+
+      <table id="list"></table>
+    </div>
+  </body>
+</html>
+
+
+<script type="text/javascript">
+  let x = 0;
+  let array = [];
+  let id = 0;
+
+  function add_element_to_array() {
+    let ptuMoi  = document.getElementById("txtValue").value;
+    array.push(ptuMoi); 
+  
+    document.getElementById("txtValue").value = "";
+    display_array();
+  }
+  function display_array() {
+    let e = "<br/>";
+    for (let i = 0; i < array.length; i++) {
+      e += `<tr>
+                <td style='width:100px; border-bottom:1px solid black'>${array[i]}</td>
+                <td><input type='button' id='btnEdit' value='Edit' onclick='edit_element_to_array(${i})'/></td>
+                <td><input type='button' id='btnDele' value='Delete' onclick='delete_element_to_array(${i})'/></td>
+            </tr>`;
+    }
+    document.getElementById("list").innerHTML = e;
+    
+  }
+  function edit_element_to_array(index) {
+      let newName = prompt("Enter new name:");
+      array[index] = newName;
+      display_array();
+  }
+  function delete_element_to_array(index) {
+      array.splice(index, 1);
+      display_array();
+  }
+</script>
