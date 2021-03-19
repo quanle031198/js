@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+  </head>
+
+  <body>
+    <h2>Bài 8:</h2>
+
+    <span id="text"></span>
+  </body>
+  <script>
+    let arr = [2,5,43,4,7,3,5,23,8,25];
+    document.write("Mảng cũ: "+arr+"<br/><br/>")
+    // for (let i = 0 ; i < 10 ; i++)
+    // {
+    //     let input = parseInt(prompt("Enter " + i+ " number: "))
+    //      arr.push(input);
+         
+    // }
+    document.write("Mảng mới: "+(arr.sort(function (a,b) { return (b-a)})))
+  </script>
+</html>

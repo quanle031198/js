@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+  </head>
+
+  <body>
+    <h2>Bài 3:</h2>
+    <span id="text"></span>
+  </body>
+  <script>
+    let arrN = [12, 24, 3];
+    let max = arrN[0];
+    let sum = 0;
+
+  for(let i = 0; i <arrN.length ; i++)
+  {
+      if(arrN[i] > max)
+      {
+        max = arrN[i];
+      }
+      sum += arrN[i];
+  }
+  let avg = sum / arrN.length;
+  document.write(max+" là số lớn nhất trong mảng. <br/><br/>")
+  document.write(avg+" là tổng của các phần tử trong mảng.")
+  </script>
+</html>

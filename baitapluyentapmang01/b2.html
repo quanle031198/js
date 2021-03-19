@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+  </head>
+
+  <body>
+    <h2>Bài 2:</h2>
+    <span id="text"></span>
+  </body>
+  <script>
+    let arr = [12, 24, 3, 46,2,4,14,5,45,100];
+    let max = arr[0];
+
+  for(let i = 0; i <arr.length ; i++)
+  {
+      if(arr[i] > max)
+      {
+        max = arr[i];
+      }
+  }
+  document.write(max+" là số lớn nhất trong mảng. Có số vị trí là: "+arr.indexOf(max))
+
+  </script>
+</html>
