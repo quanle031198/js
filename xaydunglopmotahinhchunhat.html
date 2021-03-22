@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[Bài tập] Xây dựng lớp mô tả hình chữ nhật</title>
+  </head>
+
+  <body>
+    <canvas
+      id="myCanvas"
+      width="600px"
+      height="300px"
+      style="border: 1px solid #d3d3d3"
+    ></canvas>
+  </body>
+  <script>
+    function Rectangle(length, width) {
+      this.length = length;
+      this.width = width;
+
+      this.acreage = function () {
+        this.acreage = this.length * this.width;
+        return this.acreage;
+      };
+
+      this.perimeter = function () {
+        this.perimeter = 2 * (this.length + this.width);
+        return this.perimeter;
+      };
+    }
+    
+    let thatRectangle = new Rectangle(200, 400);
+    
+    function count() {
+      let dientich = thatRectangle.acreage();
+      let chuvi = thatRectangle.perimeter();
+      document.write(
+        "<br/>" + "Diện tích hình chữ nhật là " + dientich + "<br/>"
+      );
+      document.write("chu vi hình chữ nhật là " + chuvi);
+    }
+    count();
+
+    function createRectangle() {
+      
+      let ctx = document.getElementById("myCanvas").getContext("2d");
+      ctx.fillStyle = "orange";
+      ctx.fillRect(22, 22,thatRectangle.width , thatRectangle.length);
+    }
+    createRectangle();
+  </script>
+</html>
