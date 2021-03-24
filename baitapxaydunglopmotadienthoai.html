@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>[Bài tập] Xây dựng lớp mô tả điện thoại</title>
+  </head>
+
+  <body></body>
+  <script>
+  
+
+    class MobilePhone {
+      constructor(id, name, message) {
+        this.id = id;
+        this.name = name;
+        this.message = message;
+        this.status = true;
+        this.statusBattery = 100;
+        this.currentMess = [];
+        this.inbox =[];
+        this.outbox =[];
+      }
+      setStatusMobile(boolean) {
+        this.status = boolean;
+      }
+      getStatusMobile() {
+        return this.status;
+      }
+
+      getStatusBattery() {
+        return this.statusBattery;
+      }
+
+      chargeringBattery() {
+        this.statusBattery++;
+      }
+
+      setMessage(message) {
+
+        if(this.getStatusMobile()){
+          this.message = message;
+        this.statusBattery--;
+        }
+        
+        
+      }
+      getMessage() {
+        return this.message;
+        
+        this.statusBattery--;
+      }
+      writeMessage(message) {
+        if(this.getStatusMobile()){
+          this.currentMess.push(message);
+        this.statusBattery--;
+        }
+        
+      }
+      sendMessage(message, obj) {
+
+        if(this.getStatusMobile()){
+          obj.setMessage(message);
+          this.outbox.push(message);
+          obj.inbox.push(message);
+        this.statusBattery--;
+        }
+       
+      }
+    }
+
+
+    let pro_Max = new MobilePhone(1, "pro max");
+    let samsung_Note_7 = new MobilePhone(2, "Samsung note 7");
+
+    pro_Max.setStatusMobile(true);
+    samsung_Note_7.setStatusMobile(false);
+
+    pro_Max.writeMessage("sdsad");
+    console.log("tin nhắn đang soạn của pro max: "+ pro_Max.currentMess);
+
+    pro_Max.sendMessage("hihhhiihiahah", samsung_Note_7);
+    pro_Max.sendMessage("mai thi", samsung_Note_7);
+    let samsung_Note_7_mess = samsung_Note_7.getMessage();
+
+    
+    console.log("tin nhắn pro max đã gửi cho samsung note 7: "+pro_Max.outbox);
+    console.log("tin nhắn samsung note 7 nhận của pro max: "+samsung_Note_7.inbox);
+    console.log("tin nhắn mới của samsung note 7 nhận được từ pro max: "+samsung_Note_7_mess);
+  </script>
+</html>
