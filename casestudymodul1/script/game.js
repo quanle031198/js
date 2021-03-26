@@ -1,7 +1,7 @@
 // cài đặt canvas
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
-canvas.width = 1000;
+canvas.width = 900;
 canvas.height = 400;
 
 let score = 0;
@@ -37,8 +37,8 @@ playerRight.src = 'img/dragon_go_right.png';
 
 class Player {
     constructor() {
-        this.x = canvas.width;
-        this.y = canvas.height / 2;
+        this.x = canvas.width *2;
+        this.y = canvas.height;
         this.radius = 50;
         this.angle = 0; //xoay nhân vật theo hướng chuột
         this.frameX = 0;
