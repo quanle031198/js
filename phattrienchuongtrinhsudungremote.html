@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[*Bài tập] Phát triển chương trình sử dụng Remote để điều khiển Tivi</title>
+</head>
+<body>
+  <div id="game"></div>
+  
+  <script>
+    // Class
+    class Remote {
+      constructor(id, Televison) {
+        this.id = id;
+        this.television = Televison;
+      }
+  
+      changeChannel(number) {
+        this.television.changeChannel(number);
+      }
+      
+      changeVolume(number) {
+        this.television.changeVolume(number);
+      }
+      
+      turnOnOf() {
+        this.television.on = !this.television.on;
+      }
+    }
+    
+    class Television {
+      constructor(channel, volume) {
+        this.channel = channel;
+        this.volume = volume;
+        this.on = false;
+      }
+      
+      getChannel() {
+        return this.channel;
+      }
+      
+      getVolume() {
+        return this.volume;
+      }
+      
+      currentOnOf() {
+        return this.on ? 'On' : 'Off';
+      }
+  
+      changeChannel(number) {
+        this.channel = number;
+      }
+      
+      changeVolume(number) {
+        this.volume = number;
+      }
+      
+      turnOnOf() {
+        this.on = !this.on;
+      }
+    }
+    
+    
+    const television = new Television(1, 10);
+    const remote = new Remote(1, television);
+    
+    television.turnOnOf();
+    television.changeChannel(7);
+    console.log(television);
+    remote.changeChannel(3);
+    television.changeVolume(2);
+    remote.turnOnOf();
+    console.log(television);
+    
+  </script>
+</body>
+</html>
