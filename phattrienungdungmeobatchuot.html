@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[*Bài tập] Phát triển ứng dụng mô phỏng lại quá trình mèo bắt chuột và ăn chuột.</title>
+</head>
+<body>
+  <div id="game"></div>
+  
+  <script>
+    // Class
+    class Rat{
+      constructor(name,weight,speed){
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.alive = false;
+      }
+      chirp(){
+        if(this.alive == true){
+          console.log("chít, chít");
+        } else {
+          console.log("...")
+        }
+        
+      }
+    }
+    class Cat{
+      constructor(name,weight,maxSpeed)
+      {
+        this.name = name;
+        this.weight = weight;
+        this.maxSpeed = maxSpeed;
+      }
+      chirp(){
+        console.log("gâu, gâu");
+      }
+      catchTheRat(rat){
+        if(this.maxSpeed > rat.speed)
+        {
+          this.catchRat = true;
+          console.log(`${this.name} sucess to catch ${rat.name}`);
+        } else {
+          console.log(`${this.name} fail to catch ${rat.name}`);
+        }
+      }
+      eatRat(rat){
+        if(rat.alive == true){
+          rat.alive = false;
+          this.weight += rat.weight;
+          console.log(`${this.name} eat ${rat.name}, ${this.name} is ${this.weight}`); 
+        }
+        else{
+          console.log(`${rat.name} die, cannot eat`)
+        }
+      }
+    }
+
+    let tom = new Cat('Tom',15,25);
+    let jerry = new Rat('jerry',10,20);
+
+    tom.chirp();
+    jerry.chirp();
+
+    tom.catchTheRat(jerry);
+    tom.eatRat(jerry);
+    
+    
+  </script>
+</body>
+</html>
