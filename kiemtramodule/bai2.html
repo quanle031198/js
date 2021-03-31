@@ -10,16 +10,18 @@
   </body>
   <script>
       
-    let integer = [1, 5, 8, 7, 6];
+    let integer = [1, 5, 8, 7,5, 6];
     function tryRemoveFromArray(integer, x) {
-      for (let i = 0; i < integer.length; i++) {
-        if (integer[i] == x) {
-          integer.splice(i, 1);
-          return integer;
+        let i = 0;
+        while (i < integer.length) {
+            if (integer[i] === x) {
+                integer.splice(i, 1);
+            } else {
+                ++i;
+            }
         }
-        
-      }
+        return integer;
     }
-    console.log(tryRemoveFromArray(integer, 7));
+    console.log(tryRemoveFromArray(integer, 5));
   </script>
 </html>
