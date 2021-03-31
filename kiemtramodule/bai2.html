@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bai2</title>
+  </head>
+
+  <body>
+    <h2>Bài 2:</h2>
+  </body>
+  <script>
+      
+    let integer = [1, 5, 8, 7, 6];
+    function tryRemoveFromArray(integer, x) {
+      for (let i = 0; i < integer.length; i++) {
+        if (integer[i] == x) {
+          integer.splice(i, 1);
+          return integer;
+        }
+        
+      }
+    }
+    console.log(tryRemoveFromArray(integer, 7));
+  </script>
+</html>

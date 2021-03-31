@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bai4</title>
+  </head>
+
+  <body>
+    <h2>Bài 4:</h2>
+    <canvas
+      id="myCanvas"
+      width="500px"
+      height="500px"
+      style="border: 1px solid black"
+    ></canvas>
+  </body>
+
+  <script>
+    function Circle(x, y, radius, color) {
+      this.x = x;
+      this.y = y;
+      this.radius = radius;
+      this.color = color;
+    }
+    function renderCircle() {
+      let ctx = document.getElementById("myCanvas").getContext("2d");
+      let circle = new Circle(10, 10, 100);
+      ctx.fillStyle = "#000000";
+      ctx.beginPath();
+      ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+
+    renderCircle();
+  </script>
+</html>

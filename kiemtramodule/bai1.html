@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bai1</title>
+  </head>
+
+  <body>
+    <h2>Bài 1:</h2>
+  </body>
+  <script>
+    let arrScore = [2, 3, 6, 5];
+
+    function findMax(arrScore) {
+      let max = arrScore[0];
+      for (let i = 1; i < arrScore.length; i++) {
+        if (arrScore[i] > max) {
+          max = arrScore[i];
+        }
+      }
+      return max;
+    }
+
+    console.log(findMax(arrScore));
+  </script>
+</html>
